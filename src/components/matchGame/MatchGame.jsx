@@ -41,10 +41,19 @@ function MatchGame() {
 
     const flipCard = (index) => {
         console.log("flipCard: ", index)
+
+        if (flippedCards.includes(index)) {
+            return
+        }
+        
         setFlippedCards((prev) => [...prev, index])
     }
 
     useEffect(() => {
+        console.log(flippedCards.length)
+        if (flippedCards.length == 2) {
+            setTimeout(() => {setFlippedCards([])}, 1000)
+        }
 
     }, [flippedCards])
 

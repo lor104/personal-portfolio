@@ -1,20 +1,85 @@
 import React, {useState, useEffect} from 'react'
 import cardFront from '../../assets/logo5.png'
+import ai from '../../assets/ai.png'
+import csharp from '../../assets/csharp.png'
 import css from '../../assets/css.png'
+import git from '../../assets/git.png'
+import html from '../../assets/html.png'
+import jquery from '../../assets/jquery.png'
+import js from '../../assets/js.png'
+import net from '../../assets/net.png'
+import node from '../../assets/node.png'
+import ps from '../../assets/ps.png'
+import rails from '../../assets/rails.png'
+import react from '../../assets/react.png'
+import ruby from '../../assets/ruby.png'
 import sass from '../../assets/sass.png'
+import sql from '../../assets/sql.png'
 
 import './matchGame.scss';
 import Card from '../card/Card';
 
 const uniqueCardsArray = [
     {
+        type: 'ai',
+        image: ai
+    },
+    {
+        type: 'csharp',
+        image: csharp
+    },
+    {
         type: 'css',
         image: css
     },
     {
+        type: 'git',
+        image: git
+    },
+    {
+        type: 'html',
+        image: html
+    },
+    {
+        type: 'jquery',
+        image: jquery
+    },
+    {
+        type: 'js',
+        image: js
+    },
+    {
+        type: 'net',
+        image: net
+    },
+    {
+        type: 'node',
+        image: node
+    },
+    {
+        type: 'ps',
+        image: ps
+    },
+    {
+        type: 'rails',
+        image: rails
+    },
+    {
+        type: 'react',
+        image: react
+    },
+    {
+        type: 'ruby',
+        image: ruby
+    },
+    {
         type: 'sass',
         image: sass
-    }
+    },
+    {
+        type: 'sql',
+        image: sql
+    },
 ]
 
 function swap(array, i, j) {

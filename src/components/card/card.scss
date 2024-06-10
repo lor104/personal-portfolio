@@ -11,10 +11,15 @@
         transition: 0.5s;
     }
 
-    &--inactive {
-        transform: rotateY(180deg) translateZ(1px);
+    &--stay {
+        transform: rotateY(540deg) translateZ(0px);
         transform-style: preserve-3d;
         transition: 0.5s;
+
+        .card__face--front {
+            visibility: visible;
+            visibility: hidden;
+        }
     }
 
     &__face {

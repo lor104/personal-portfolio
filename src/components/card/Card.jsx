@@ -19,7 +19,7 @@ function Card({ index, card, flipCard, cardFront, cardImage, isFlipped, isInacti
             className += " card--flip";
         }
         if (isInactive) {
-            className += " card--inactive";
+            className += " card--flip card--stay";
         }
         return className
     }

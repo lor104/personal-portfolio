@@ -1,11 +1,18 @@
 import React from 'react';
 import './card.scss';
 
-function Card({ index, card, flipCard, cardFront, cardImage, isFlipped, isInactive }) {
+function Card({ index, card, flipCard, cardFront, cardImage, isFlipped, isInactive, flippedCards }) {
     const handleCardClick = () => {
+
+        // dont track a third click while cards are matching
+        if (flippedCards.length === 2) {
+            return;
+        }
+
         !isFlipped && !isInactive && flipCard(index)
     }
 
+    // create classname based on whether a card is flipped, inactive (or default, active)
     const evaluateClass = (isFlipped, isInactive) => {
         let className = "card skill";
         if (isFlipped) {

@@ -39,6 +39,7 @@ function MatchGame() {
     const [flippedCards, setFlippedCards] = useState([])
     const [matchedCards, setMatchedCards] = useState([])
 
+    // flip a card when it is clicked
     const flipCard = (index) => {
         console.log("flipCard: ", index)
 
@@ -49,16 +50,19 @@ function MatchGame() {
         setFlippedCards((prev) => [...prev, index])
     }
 
+    // track the cards that are flipped and update UI when changes occur
     useEffect(() => {
         if (flippedCards.length == 2) {
             checkMatch(flippedCards)
         }
     }, [flippedCards])
 
+    // track whether a card is flipped or not
     const checkIsFlipped = (index) => {
         return flippedCards.includes(index)
     }
 
+    // check whether 2 cards are a match
     const checkMatch = (flippedCards) => {
         const [first, second] = flippedCards
         if (cards[first].type === cards[second].type) {
@@ -68,6 +72,7 @@ function MatchGame() {
         setTimeout(() => {setFlippedCards([])}, 1000)
     }
 
+    // check whether the cards have been matched, therefore inactive
     const isInactive = (card) => {
         return matchedCards[card.type]
     }
@@ -85,6 +90,7 @@ function MatchGame() {
                         cardImage={card.image}
                         isFlipped={checkIsFlipped(index)}
                         isInactive={isInactive(card)}
+                        flippedCards={flippedCards}
                     />
                 );
                 })}

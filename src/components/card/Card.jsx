@@ -1,18 +1,25 @@
 import React from 'react';
 import './card.scss';
 
-function Card({ index, card, flipCard, cardFront, cardImage, isFlipped }) {
+function Card({ index, card, flipCard, cardFront, cardImage, isFlipped, isInactive }) {
     const handleCardClick = () => {
-        flipCard(index)
+        !isFlipped && !isInactive && flipCard(index)
+    }
+
+    const evaluateClass = (isFlipped, isInactive) => {
+        let className = "card skill";
+        if (isFlipped) {
+            className += " card--flip";
+        }
+        if (isInactive) {
+            className += " card--inactive";
+        }
+        return className
     }
 
   return (
     <div 
-        className={isFlipped ? 
-            "card skill card--flip" :
-            "card skill"}
-        // index={index}
-        // card={card}
+        className={evaluateClass(isFlipped, isInactive)}
         key={index}
         onClick={(e) => handleCardClick(e)}>
             <img 

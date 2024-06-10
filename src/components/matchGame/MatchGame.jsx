@@ -50,15 +50,26 @@ function MatchGame() {
     }
 
     useEffect(() => {
-        console.log(flippedCards.length)
         if (flippedCards.length == 2) {
-            setTimeout(() => {setFlippedCards([])}, 1000)
+            checkMatch(flippedCards)
         }
-
     }, [flippedCards])
 
     const checkIsFlipped = (index) => {
         return flippedCards.includes(index)
+    }
+
+    const checkMatch = (flippedCards) => {
+        const [first, second] = flippedCards
+        if (cards[first].type === cards[second].type) {
+            setMatchedCards((prev) => ({ ...prev, [cards[first].type]: true }))
+        }
+
+        setTimeout(() => {setFlippedCards([])}, 1000)
+    }
+
+    const isInactive = (card) => {
+        return matchedCards[card.type]
     }
 
     return (
@@ -73,6 +84,7 @@ function MatchGame() {
                         cardFront={cardFront}
                         cardImage={card.image}
                         isFlipped={checkIsFlipped(index)}
+                        isInactive={isInactive(card)}
                     />
                 );
                 })}

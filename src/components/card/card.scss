@@ -11,6 +11,12 @@
         transition: 0.5s;
     }
 
+    &--inactive {
+        transform: rotateY(180deg) translateZ(1px);
+        transform-style: preserve-3d;
+        transition: 0.5s;
+    }
+
     &__face {
         // border-radius: 50%;
         

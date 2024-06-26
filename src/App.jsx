@@ -3,6 +3,7 @@ import { ThemeContext } from './theme'
 import './App.scss'
 import Skills from './pages/skills/Skills'
 import ToggleSwitch from './components/toggleSwitch/ToggleSwitch';
+import Landing from './pages/landing/Landing';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -11,14 +12,14 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      {/* <button onClick={() => toggleTheme()}>{theme}</button> */}
-      <ToggleSwitch 
+      <Landing />
+      {/* <ToggleSwitch 
         isChecked={theme === "dev" ? false : true}
         onChange={() => toggleTheme()}
         left="developer"
         right="artist"
         /> 
-      <Skills />
+      <Skills /> */}
     </div>
   )
 }

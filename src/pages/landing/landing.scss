@@ -1,0 +1,20 @@
+@use '../../styles/typography' as *;
+@use '../../styles/variables' as *;
+
+.landing {
+    background-color: $background;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__title {
+
+    }
+
+    &__subtitle {
+        font-family: 'Consolas';
+        font-weight: normal;
+    }
+}

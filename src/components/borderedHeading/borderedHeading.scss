@@ -1,0 +1,43 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+
+.bordered-heading {
+    &__box {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $highlight;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+
+        &--left {
+            left: -20px;
+        }
+
+        &--right {
+            right: -20px;
+        }
+
+    }
+
+    &__text {
+        font-family: 'Montserrat';
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        padding: 0 20px;
+        color: $black;
+        margin: 20px 0;
+        display: inline-block;
+        font-size: 60px;
+
+    }
+
+    &__underline {
+        width: 35px;
+        height: 1px;
+        background-color: black;
+        margin-bottom: 50px;
+    }
+}

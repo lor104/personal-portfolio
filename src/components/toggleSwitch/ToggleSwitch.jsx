@@ -3,7 +3,6 @@ import './toggleSwitch.scss'
 
 function toggleSwitch({ isChecked, onChange, left, right }) {
     let [checked, setChecked] = useState(isChecked)
-    console.log(isChecked)
 
     const handleClick = () => {
         onChange()
@@ -26,6 +25,7 @@ function toggleSwitch({ isChecked, onChange, left, right }) {
                 className={`toggle-switch__toggle toggle-switch__toggle--${checked ? "right" : "left"}`} 
                 type="checkbox" 
                 checked={checked}
+                readOnly
                 />
         </div>
         <label 

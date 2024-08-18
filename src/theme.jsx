@@ -16,7 +16,7 @@ const getTheme = () => {
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(getTheme);
 
-  function toggleTheme() {
+  const toggleTheme = () => {
     if (theme === "dev") {
       setTheme("art");
     } else {

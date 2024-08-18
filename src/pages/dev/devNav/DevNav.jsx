@@ -4,9 +4,9 @@ import './devNav.scss';
 
 function DevNav() {
   return (
-    <header class="header">
+    <header className="header">
         <h1 className='header__title'>Lauren Rosentzveig</h1>
-        <nav class="nav">
+        <nav className="nav">
             <NavLink>About Me</NavLink>
             <NavLink>Education</NavLink>
             <NavLink>Experience</NavLink>

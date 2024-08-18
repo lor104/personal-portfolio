@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { ThemeContext } from './theme'
 import './App.scss'
 import Nav from './components/nav/Nav';

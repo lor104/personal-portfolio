@@ -1,16 +1,24 @@
-import React from 'react'
+import { useContext } from 'react'
+import { ThemeContext } from '../../theme'
 import './landing.scss'
 import BorderedHeading from '../../components/borderedHeading/BorderedHeading'
 import { Link } from 'react-router-dom'
 
 function Landing() {
+    const { setTheme } = useContext(ThemeContext);
+
     return (
         <div className='landing'>
+            {/* <p className='landing__tagline'>
+                Traditional Printmaker & Web Developer
+            </p> */}
             <BorderedHeading title="Lauren Rosentzveig"/>
-            <Link className='landing__subtitle' to="/dev">
+            <Link onClick={() => setTheme("dev")} 
+                className='landing__subtitle' to="/dev">
                 Developer <span>➡️</span>
             </Link>
-            <Link className='landing__subtitle' to="/art">
+            <Link onClick={() => setTheme("art")} 
+                className='landing__subtitle' to="/art">
                 Artist <span>➡️</span>
             </Link>
         </div>

@@ -33,3 +33,7 @@
     font-style: normal;
     font-display: swap;
 }
+
+@mixin body {
+    font-family: Consolas, monospace;
+}

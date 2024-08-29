@@ -1,0 +1,13 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+
+.nav {
+
+    &.dev {
+        background-color: $foreground;
+    }
+    
+    &.art {
+        background-color: $highlight4;
+    }
+}

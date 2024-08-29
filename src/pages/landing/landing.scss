@@ -2,7 +2,6 @@
 @use '../../styles/variables' as *;
 
 .landing {
-    background-color: $background;
     text-align: center;
     min-height: 100vh;
     display: flex;
@@ -10,12 +9,13 @@
     justify-content: center;
 
     &__title {
-
+        @include titles;
     }
 
     &__tagline {
-        @include body;
-        font-size: 1.2rem;
+        @include body {
+            font-size: 1.2rem;
+        }
         margin-bottom: 0;
     }
 
@@ -26,5 +26,9 @@
         font-weight: normal;
         text-decoration: none;
         color: black;
+    }
+
+    .bordered-heading__text {
+        font-size: 60px;
     }
 }

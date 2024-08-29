@@ -27,6 +27,24 @@
 
 @font-face {
     font-family: 'Montserrat';
+    src: url('/src/assets/fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('/src/assets/fonts/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/src/assets/fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('/src/assets/fonts/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
     src: url('/src/assets/fonts/Montserrat-Bold.woff2') format('woff2'),
         url('/src/assets/fonts/Montserrat-Bold.woff') format('woff');
     font-weight: bold;
@@ -34,6 +52,47 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/src/assets/fonts/Inconsolata-Regular.woff2') format('woff2'),
+        url('/src/assets/fonts/Inconsolata-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inconsolata';
+    src: url('/src/assets/fonts/Inconsolata-Medium.woff2') format('woff2'),
+        url('/src/assets/fonts/Inconsolata-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('/src/assets/fonts/Karla-Regular.woff2') format('woff2'),
+        url('/src/assets/fonts/Karla-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @mixin body {
     font-family: Consolas, monospace;
+    @content;
+}
+
+@mixin titles {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 600;
+    @content;
+}
+
+@mixin links {
+    font-family: Courier, "Consolas", monospace;
+    font-weight: 400;
 }

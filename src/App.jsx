@@ -15,6 +15,7 @@ import {
   Outlet,
   useLocation
 } from "react-router-dom";
+import DevAbout from './pages/dev/devAbout/DevAbout';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -48,6 +49,12 @@ const router = createBrowserRouter([
         path: "dev/skills",
         element: (
           <MatchGame />
+        ),
+      },
+      {
+        path: "dev/about",
+        element: (
+          <DevAbout />
         ),
       },
       {

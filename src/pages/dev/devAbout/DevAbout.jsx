@@ -1,13 +1,13 @@
 import React from 'react';
 import './devAbout.scss'
-import BorderedTitle from '../../../components/borderedHeading/BorderedHeading';
+import BorderedHeading from '../../../components/borderedHeading/BorderedHeading';
 import portrait from '../../../assets/background-images/portrait.png'
 
 function DevAbout() {
   return (
     <div className='dev-about'>
         <div className="dev-about__text-container">
-            <BorderedTitle title="About Me" />
+            <BorderedHeading title="About Me" hLevel={2} />
             <p className='dev-about__text dev-about__text--emphasis'>
                 Traditional Printmaker turned Web Developer, I strive to be creative in everything I do. 
             </p>

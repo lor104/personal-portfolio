@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+@use '../../styles/typography' as *;
+
+.coloured-heading {
+    width: 100%;
+
+    &__text {
+        padding: 15px;
+        width: 70%;
+        margin: auto;
+        text-align: center;
+        // font-weight: 600;
+        @include titles;
+        // font-family: 'Montserrat', sans-serif;
+        // font-style: black;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+
+        &--cantaloupe {
+            background-color: $highlight;
+        }
+        
+        &--lavender {
+            background-color: $highlight2;
+        }
+        
+        &--honeydew {
+            background-color: $highlight3;
+        }
+        
+        &--orchid {
+            background-color: $highlight4;
+        }
+        
+        &--peach {
+            background-color: $highlight5;
+        }
+    }
+}

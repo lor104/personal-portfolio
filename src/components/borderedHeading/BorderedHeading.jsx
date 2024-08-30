@@ -1,14 +1,15 @@
 import React from 'react'
 import './borderedHeading.scss'
 
-function BorderedTitle({ title }) {
+function BorderedTitle({ title, hLevel }) {
+  const Heading = "h" + hLevel
   return (
     <div className='bordered-heading'>
-      <h2 className='bordered-heading__text'>
+      <Heading className='bordered-heading__text'>
         <span className='bordered-heading__box bordered-heading__box--left'></span>
         {title}
         <span className='bordered-heading__box bordered-heading__box--right'></span>
-      </h2>
+      </Heading>
       <hr className='bordered-heading__underline' />
     </div>
   )

@@ -16,6 +16,7 @@ import {
   useLocation
 } from "react-router-dom";
 import DevAbout from './pages/dev/devAbout/DevAbout';
+import DevEducation from './pages/dev/devEducation/DevEducation';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -55,6 +56,12 @@ const router = createBrowserRouter([
         path: "dev/about",
         element: (
           <DevAbout />
+        ),
+      },
+      {
+        path: "dev/education",
+        element: (
+          <DevEducation />
         ),
       },
       {

@@ -1,4 +1,4 @@
-.dev-edu {
+.dev-exp {
     padding: 3% 15%;
     position: relative;
     min-height: 75vh;
@@ -21,6 +21,16 @@
         font-size: 16px;
         text-align: center;
         line-height: 1.8;
+        margin-top: 0.5em;
+    }
+    
+    &__position {
+        font-family: Inconsolata;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+        line-height: 1.8;
+        margin-bottom: 0;
     }
 
     &__description {

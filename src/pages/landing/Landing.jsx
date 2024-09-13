@@ -14,7 +14,7 @@ function Landing() {
             </p> */}
             <BorderedHeading title="Lauren Rosentzveig"/>
             <Link onClick={() => setTheme("dev")} 
-                className='landing__subtitle' to="/dev">
+                className='landing__subtitle' to="/dev/about">
                 Developer <span>➡️</span>
             </Link>
             <Link onClick={() => setTheme("art")} 

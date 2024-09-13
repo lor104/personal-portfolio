@@ -4,7 +4,6 @@ import './App.scss'
 import Nav from './components/nav/Nav';
 import DevHome from './pages/dev/devHome/DevHome';
 import ArtHome from './pages/art/artHome/ArtHome';
-import MatchGame from './components/matchGame/MatchGame';
 
 // import Skills from './pages/dev/skills/Skills'
 // import ToggleSwitch from './components/toggleSwitch/ToggleSwitch';
@@ -18,6 +17,7 @@ import {
 import DevAbout from './pages/dev/devAbout/DevAbout';
 import DevEducation from './pages/dev/devEducation/DevEducation';
 import DevExperience from './pages/dev/devExperience/DevExperience';
+import DevSkills from './pages/dev/devSkills/DevSkills';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "dev/skills",
         element: (
-          <MatchGame />
+          <DevSkills />
         ),
       },
       {

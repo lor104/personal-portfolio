@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @font-face {
     font-family: 'Consolas';
     src: url('/src/assets/fonts/Consolas.woff2') format('woff2'),
@@ -84,10 +86,15 @@
     @content;
 }
 
+p, a {
+    @include body;
+    color: $black;
+}
+
 @mixin titles {
     font-family: "Montserrat", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 8px;
+    letter-spacing: 0.4em;
     font-weight: 600;
     @content;
 }

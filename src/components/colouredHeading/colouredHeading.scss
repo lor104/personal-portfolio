@@ -7,14 +7,13 @@
     &__text {
         padding: 15px;
         width: 70%;
-        margin: auto;
+        margin: 0 auto 20px auto;
         text-align: center;
         // font-weight: 600;
         @include titles;
         // font-family: 'Montserrat', sans-serif;
         // font-style: black;
         text-transform: uppercase;
-        letter-spacing: 8px;
 
         &--cantaloupe {
             background-color: $highlight;

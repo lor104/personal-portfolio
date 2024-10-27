@@ -39,7 +39,7 @@ function DevNav() {
             return (
               <NavLink 
                 key={navItem.id}
-                exact
+                exact="true"
                 to={`/dev${navItem.link}`}
                 className={isActive =>  "dev-nav__link" + (isActive.isActive ? " dev-nav__link--active" : "")}>
                 {navItem.text}

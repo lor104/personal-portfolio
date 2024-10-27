@@ -1,0 +1,89 @@
+@use '../../../styles/typography' as *;
+
+@keyframes show {
+    0% {
+        opacity: 0
+    }
+    99% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    99% {
+        opacity: 0
+    }
+}
+
+.dev-skills {
+    padding: 3% 15%;
+    position: relative;
+    min-height: 75vh;
+    text-align: center;
+
+    &__description {
+        font-family: Inconsolata;
+        font-weight: normal;
+        font-size: 20px;
+        text-align: center;
+        line-height: 2;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__link {
+        // text-decoration: underline;
+        border-bottom: 0.5px solid black;
+        cursor: pointer;
+
+        &:hover {
+            color: grey;
+            border-bottom: 0.5px solid grey;
+        }
+    }
+}
+
+.skills {
+
+    &__item {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        @include list-reset;
+    }
+
+    &__list-item {
+        font-size: 1.1em;
+        line-height: 1.6em;;
+    }
+
+    &.hide {
+        opacity: 0;
+        display: none;
+        animation: hide 1s;
+    }
+    
+    &.show {
+        opacity: 1;
+        display: static;
+        animation: show 1s;
+    }
+}
+
+.game {
+    &.hide {
+        opacity: 0;
+        display: none;
+        animation: hide 1s;
+    }
+    
+    &.show {
+        opacity: 1;
+        display: static;
+        animation: show 1s;
+    } 
+}

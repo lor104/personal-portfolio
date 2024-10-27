@@ -1,9 +1,7 @@
 .card {
-    // width: 120px;
+    
     padding: 5px;
-    // flex-basis: 16%;
     cursor: pointer;
-    // padding: 10px 0;
     
     &--flip {
         transform: rotateY(180deg) translateZ(1px);
@@ -16,14 +14,16 @@
         transform-style: preserve-3d;
         transition: 0.5s;
 
-        .card__face--front {
+        .card__face--back {
             visibility: visible;
             visibility: hidden;
         }
     }
 
+    //correct styling
     &__face {
-        // border-radius: 50%;
+        width: 150px;
+        padding: 5px;
         
         &--front {
             transform: translate3d(0, 0, 0);
@@ -41,5 +41,26 @@
         }
         
     }
+    //reverse for testing
+    // &__face {
+    //     width: 150px;
+    //     padding: 5px;
+        
+    //     &--back {
+    //         transform: translate3d(0, 0, 0);
+    //         position: absolute;
+    //         z-index: 1;
+    //         transform-style: preserve-3d;
+    //         backface-visibility: visible;
+    //         backface-visibility: hidden;
+    //     }
+        
+    //     &--front {
+    //         transform: rotateY(-180deg) translateZ(1px);
+    //         transform-style: preserve-3d;
+    //         transition: 0.5s;
+    //     }
+        
+    // }
 
 }

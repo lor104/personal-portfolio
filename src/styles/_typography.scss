@@ -86,7 +86,13 @@
     @content;
 }
 
-p, a {
+@mixin list-reset {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+p, a, li {
     @include body;
     color: $black;
 }

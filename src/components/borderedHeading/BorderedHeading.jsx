@@ -1,7 +1,7 @@
 import React from 'react'
 import './borderedHeading.scss'
 
-function BorderedTitle({ title, hLevel }) {
+function BorderedTitle({ title, hLevel = 6 }) {
   const Heading = "h" + hLevel
   return (
     <div className='bordered-heading'>

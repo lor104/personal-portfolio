@@ -3,6 +3,8 @@ import cardFront from '../../assets/logo5.png'
 import ai from '../../assets/ai.png'
 import csharp from '../../assets/csharp.png'
 import css from '../../assets/css.png'
+import express from '../../assets/express.png'
+import figma from '../../assets/figma.png'
 import git from '../../assets/git.png'
 import html from '../../assets/html.png'
 import jquery from '../../assets/jquery.png'
@@ -15,6 +17,7 @@ import react from '../../assets/react.png'
 import ruby from '../../assets/ruby.png'
 import sass from '../../assets/sass.png'
 import sql from '../../assets/sql.png'
+import wordpress from '../../assets/wordpress.png'
 
 import './matchGame.scss';
 import Card from '../card/Card';
@@ -31,6 +34,14 @@ const uniqueCardsArray = [
     {
         type: 'css',
         image: css
+    },
+    {
+        type: 'express',
+        image: express
+    },
+    {
+        type: 'figma',
+        image: figma
     },
     {
         type: 'git',
@@ -80,6 +91,10 @@ const uniqueCardsArray = [
         type: 'sql',
         image: sql
     },
+    {
+        type: 'wordpress',
+        image: wordpress
+    },
 ]
 
 function swap(array, i, j) {
@@ -97,10 +112,11 @@ function shuffleCards(array) {
     return array;
 }
 
-function MatchGame() {
+function MatchGame({ endGame }) {
     const [cards, setCards] = useState(
         () => shuffleCards(uniqueCardsArray.concat(uniqueCardsArray))
       );
+    const [matches, setMatches] = useState(0)
     const [flippedCards, setFlippedCards] = useState([])
     const [matchedCards, setMatchedCards] = useState([])
 
@@ -122,6 +138,16 @@ function MatchGame() {
         }
     }, [flippedCards])
 
+    // track matches to end the game when all matches are made
+    useEffect(() => {
+        if (matches === uniqueCardsArray.length) {
+            setCards(shuffleCards(uniqueCardsArray.concat(uniqueCardsArray)))
+            setFlippedCards([])
+            setMatchedCards([])
+            endMatchGame()
+        }
+    }, [matches])
+
     // track whether a card is flipped or not
     const checkIsFlipped = (index) => {
         return flippedCards.includes(index)
@@ -132,6 +158,7 @@ function MatchGame() {
         const [first, second] = flippedCards
         if (cards[first].type === cards[second].type) {
             setMatchedCards((prev) => ({ ...prev, [cards[first].type]: true }))
+            setMatches(matches + 1)
         }
 
         setTimeout(() => {setFlippedCards([])}, 1000)
@@ -142,11 +169,19 @@ function MatchGame() {
         return matchedCards[card.type]
     }
 
+    // end game when all matches are made
+    const endMatchGame = () => {
+        setMatches(0)
+        endGame()
+    }
+
+
     return (
         <div className='match-game'>
             {cards.map((card, index) => {
                 return (
                     <Card
+                        className="match-game__card"
                         key={index}
                         index={index}
                         card={card}

@@ -14,8 +14,7 @@
         transform-style: preserve-3d;
         transition: 0.5s;
 
-        .card__face--back {
-            visibility: visible;
+        .card__face--front {
             visibility: hidden;
         }
     }
@@ -30,7 +29,6 @@
             position: absolute;
             z-index: 1;
             transform-style: preserve-3d;
-            backface-visibility: visible;
             backface-visibility: hidden;
         }
         

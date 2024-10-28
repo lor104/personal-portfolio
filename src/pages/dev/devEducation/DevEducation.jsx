@@ -2,6 +2,7 @@ import React from 'react'
 import './devEducation.scss'
 import BorderedTitle from '../../../components/borderedHeading/BorderedHeading'
 import ColouredHeading from '../../../components/colouredHeading/ColouredHeading'
+import skyline from '../../../assets/background-images/skyline.png'
 
 function DevEducation() {
   return (
@@ -29,7 +30,7 @@ function DevEducation() {
               <p className='dev-edu__description'>Graduated with a major in Fine Arts (specialization in Printmedia) and a minor in mathematics</p>
             </div>
         </div>
-        {/* <img className='dev-edu__skyline' src={skyline} alt="Single line drawing, skyline of Toronto, ON, Canada" /> */}
+        <img className='dev-edu__skyline' src={skyline} alt="Single line drawing, skyline of Toronto, ON, Canada" />
     </div>
   )
 }

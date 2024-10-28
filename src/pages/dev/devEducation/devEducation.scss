@@ -31,4 +31,13 @@
         line-height: 2;
         margin-top: 0;
     }
+
+    &__skyline {
+        position: absolute;
+        bottom: -8px;
+        right: 0px;
+        width: 100%;
+        opacity: .8;
+        z-index: -100;
+    }
 }

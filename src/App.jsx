@@ -18,6 +18,7 @@ import DevAbout from './pages/dev/devAbout/DevAbout';
 import DevEducation from './pages/dev/devEducation/DevEducation';
 import DevExperience from './pages/dev/devExperience/DevExperience';
 import DevSkills from './pages/dev/devSkills/DevSkills';
+import DevContact from './pages/dev/devContact/DevContact';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -69,6 +70,12 @@ const router = createBrowserRouter([
         path: "dev/experience",
         element: (
           <DevExperience />
+        ),
+      },
+      {
+        path: "dev/contact",
+        element: (
+          <DevContact />
         ),
       },
       {

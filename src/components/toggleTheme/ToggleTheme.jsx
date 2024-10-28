@@ -11,9 +11,9 @@ function toggleTheme() {
   const changeTheme = () => {
     console.log(theme)
     theme === "dev" ?
-      navigate("/art")
+      navigate("/art/about")
       :
-      navigate("/dev")
+      navigate("/dev/about")
 
       toggleTheme()
   }

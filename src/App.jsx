@@ -2,8 +2,7 @@ import { useContext } from 'react'
 import { ThemeContext } from './theme'
 import './App.scss'
 import Nav from './components/nav/Nav';
-import DevHome from './pages/dev/devHome/DevHome';
-import ArtHome from './pages/art/artHome/ArtHome';
+import ArtAbout from './pages/art/artAbout/ArtAbout';
 
 // import Skills from './pages/dev/skills/Skills'
 // import ToggleSwitch from './components/toggleSwitch/ToggleSwitch';
@@ -43,18 +42,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "dev",
-        element: (
-          <DevHome />
-        ),
-      },
-      {
-        path: "dev/skills",
-        element: (
-          <DevSkills />
-        ),
-      },
-      {
         path: "dev/about",
         element: (
           <DevAbout />
@@ -73,6 +60,12 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "dev/skills",
+        element: (
+          <DevSkills />
+        ),
+      },
+      {
         path: "dev/contact",
         element: (
           <DevContact />
@@ -80,9 +73,9 @@ const router = createBrowserRouter([
       },
       {
 
-        path: "art",
+        path: "art/about",
         element: (
-          <ArtHome />
+          <ArtAbout />
         ),
       }
     ]

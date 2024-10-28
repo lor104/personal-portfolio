@@ -18,7 +18,7 @@ function Landing() {
                 Developer <span>➡️</span>
             </Link>
             <Link onClick={() => setTheme("art")} 
-                className='landing__subtitle' to="/art">
+                className='landing__subtitle' to="/art/about">
                 Artist <span>➡️</span>
             </Link>
         </div>

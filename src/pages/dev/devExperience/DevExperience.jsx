@@ -53,7 +53,7 @@ function DevExperience() {
             <div className='dev-exp__block'>
               <ColouredHeading title="HealthWorks" hLevel={3} colour="honeydew"/>
               <h4 className='dev-exp__dates'>March - May 2017</h4>
-              <p className='dev-exp__description'>Since been acquired by General Assembly. Completed the Web Development (Full Stack) Immersive Bootcamp in May 2017</p>
+              <p className='dev-exp__description'>Worked with senior back end developers to build the company's corporate website and online identity. Actively suggest design options and implement. Projects mainly included editing wordpress themes and customization.</p>
             </div>
             <div className='dev-exp__block'>
               <ColouredHeading title="Baby Uno" hLevel={3} colour="peach"/>

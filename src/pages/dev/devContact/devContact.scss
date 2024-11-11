@@ -1,13 +1,13 @@
 @use '../../../styles/variables' as *;
 .dev-contact {
-    padding: 3% 15%;
+    padding: 3% 25%;
     position: relative;
     min-height: 75vh;
     text-align: center;
     background-image: url("../../../assets/background-images/planes.png");
     background-repeat: no-repeat;
-    background-position: 50% 45%;
-    background-size: 50%;
+    background-position: 94% 24%;
+    background-size: 40%;
 
     &__link {
         position: relative;
@@ -16,7 +16,7 @@
         border: 1px solid black;
         border-radius: 4px;
         padding: 0.5em 0.5em;
-        margin: 0.5em;
+        margin: 1em;
         display: block;
         min-width: 300px;
         text-align: right;

@@ -1,15 +1,6 @@
 @use './variables' as *;
 
 @font-face {
-    font-family: 'Consolas';
-    src: url('/src/assets/fonts/Consolas.woff2') format('woff2'),
-        url('/src/assets/fonts/Consolas.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Montserrat';
     src: url('/src/assets/fonts/Montserrat-Light.woff2') format('woff2'),
         url('/src/assets/fonts/Montserrat-Light.woff') format('woff');
@@ -55,6 +46,51 @@
 }
 
 @font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca-Light.woff2') format('woff2'),
+        url('/src/assets/fonts/LexendDeca-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca-Regular.woff2') format('woff2'),
+        url('/src/assets/fonts/LexendDeca-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca-Medium.woff2') format('woff2'),
+        url('/src/assets/fonts/LexendDeca-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca-SemiBold.woff2') format('woff2'),
+        url('/src/assets/fonts/LexendDeca-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LexendDeca';
+    src: url('/src/assets/fonts/LexendDeca-Bold.woff2') format('woff2'),
+        url('/src/assets/fonts/LexendDeca-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Inconsolata';
     src: url('/src/assets/fonts/Inconsolata-Regular.woff2') format('woff2'),
         url('/src/assets/fonts/Inconsolata-Regular.woff') format('woff');
@@ -72,17 +108,8 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Karla';
-    src: url('/src/assets/fonts/Karla-Regular.woff2') format('woff2'),
-        url('/src/assets/fonts/Karla-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 @mixin body {
-    font-family: Consolas, monospace;
+    font-family: "Inconsolata", monospace;
     @content;
 }
 
@@ -98,14 +125,14 @@ p, a, li {
 }
 
 @mixin titles {
-    font-family: "Montserrat", sans-serif;
+    font-family: "LexendDeca", sans-serif;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-weight: 600;
+    letter-spacing: 0.2em;
+    font-weight: 500;
     @content;
 }
 
 @mixin links {
-    font-family: Courier, "Consolas", monospace;
+    font-family: "Inconsolata", monospace;
     font-weight: 400;
 }

@@ -1,0 +1,20 @@
+@use './typography' as *;
+@use './variables' as *;
+
+.background {
+    $left-color: $mint;
+    $background: $floral;
+    $right-color: $lavender;
+
+    transition: background-position 0.75s;
+    background-size: 400% 100%;
+    background-image: linear-gradient(to right, $left-color 0%,$left-color 30%, $background 30%, $background 70%, $right-color 70%, $right-color 100%);
+    background-position: 50% 0;
+
+    &--slide-left {
+        background-position: 0 0;
+    }
+    &--slide-right {
+        background-position: 100% 0;
+    }
+}

@@ -7,6 +7,7 @@ import ArtAbout from './pages/art/artAbout/ArtAbout';
 // import Skills from './pages/dev/skills/Skills'
 // import ToggleSwitch from './components/toggleSwitch/ToggleSwitch';
 import Landing from './pages/landing/Landing';
+import Error from './components/error/Error';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -78,7 +79,10 @@ const router = createBrowserRouter([
           <ArtAbout />
         ),
       }
-    ]
+    ],
+    errorElement: (
+      <Error />
+    ),
   }
 ]);
 

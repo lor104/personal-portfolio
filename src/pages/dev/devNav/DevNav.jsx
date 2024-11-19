@@ -32,8 +32,8 @@ const navItems = [
 
 function DevNav() {
   return (
-    <header className="header">
-        <h1 className='header__title'>Lauren Rosentzveig</h1>
+    <header className="dev header">
+        <h1 className='dev header__title'>Lauren Rosentzveig</h1>
         <nav className="nav dev-nav">
           {navItems.map(navItem => {
             return (

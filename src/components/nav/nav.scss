@@ -2,12 +2,13 @@
 @use '../../styles/typography' as *;
 
 .nav {
+    padding: 1em;
 
     &.dev {
         background-color: $foreground;
     }
     
     &.art {
-        background-color: $highlight4;
+        background-color: $orchid;
     }
 }

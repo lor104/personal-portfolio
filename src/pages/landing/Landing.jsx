@@ -22,20 +22,19 @@ function Landing() {
 
     return (
         <div  className={`landing background ${backgroundClass}`}>
-            {/* <p className='landing__tagline'>
-                Traditional Printmaker & Web Developer
-            </p> */}
             <BorderedHeading title="Lauren Rosentzveig"/>
             <Link onClick={() => setTheme("dev")} 
                 onMouseEnter={() => slideBackground("dev")}
                 onMouseLeave={() => setBackgroundClass("")}
-                className='landing__subtitle' to="/dev/about">
+                className='landing__subtitle' 
+                to="/dev/about">
                 Developer <span>➡️</span>
             </Link>
             <Link onClick={() => setTheme("art")} 
                 onMouseEnter={() => slideBackground("art")}
                 onMouseLeave={() => setBackgroundClass("")}
-                className='landing__subtitle' to="/art/about">
+                className='landing__subtitle' 
+                to="/art/about">
                 Artist <span>➡️</span>
             </Link>
         </div>

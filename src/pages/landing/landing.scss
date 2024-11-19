@@ -1,5 +1,6 @@
 @use '../../styles/typography' as *;
 @use '../../styles/variables' as *;
+@use '../../styles/slide-background' as *;
 
 .landing {
     text-align: center;
@@ -26,6 +27,8 @@
         font-weight: normal;
         text-decoration: none;
         color: black;
+        align-self: center;
+        cursor: pointer;
     }
 
     .bordered-heading__text {

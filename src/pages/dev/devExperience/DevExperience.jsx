@@ -34,7 +34,7 @@ function DevExperience() {
                   <h4 className="dev-exp__title">Projects Include:</h4>
                   <div className="dev-exp__project">
                       <ColouredHeading title="LG Appliance Kiosk" hLevel={4} colour="cantaloupe"/>
-                      <p className='dev-exp__description'>Created LG Appliance Kiosk, an application where users can select appliances and view them in a kitchen/laundry room environment. Specifically designed for Best Buy Experience stores across Canada where users can access through a touch enabled kiosk screen.
+                      <p className='dev-exp__description'>Created LG Appliance Kiosk, an application where users can select appliances and view them in a kitchen/laundry room environment. Designed the architecture of the application, developed a state-based management system, and deployed the application within a 3 week timeline. Specifically designed for Best Buy Experience stores across Canada where users can access through a touch enabled kiosk screen.
                       (not responsive, only done for 1920x1080 screen resolution)</p>
                       <a target="_blank" href="https://977.lgappliancekiosk.ca/Shared">View Site</a>
                   </div>

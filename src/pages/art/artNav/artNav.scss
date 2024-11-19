@@ -1,0 +1,73 @@
+@use '../../../styles/typography' as *;
+@use '../../../styles/variables' as *;
+
+.art.header {
+    // background-color: $orchid;
+    padding: 20px 0;
+
+    &__title {
+        @include titles {
+            text-align: center;
+        }
+    }
+}
+
+.art-nav {
+    display: flex;
+    border-radius: 4px;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    
+    &__link {
+        @include links;
+        font-family: 'LexendDeca';
+        letter-spacing: 1px;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 3px 10px;
+        margin: 3px;
+        color: black;
+        display: inline-block;
+        width: fit-content;
+        margin: auto;
+        position: relative;
+        &::before {
+            content: "■";
+            position: absolute;
+            font-size: 2em;
+            left: -18px;
+            top: -6px;
+            line-height: 1em;
+            color: $orchid;
+        }
+
+        &::after {
+            content: "■";
+            position: absolute;
+            font-size: 2em;
+            right: -18px;
+            top: -6px;
+            line-height: 1em;
+            color: $orchid;
+        }
+
+        &--active {
+            &::before {
+                color: $lavender;
+            }
+            &::after {
+                color: $lavender;
+            }
+        } 
+
+        &:hover {
+            &::before {
+                color: $cantaloupe;
+            }
+            &::after {
+                color: $cantaloupe;
+            }
+        }
+    }
+}

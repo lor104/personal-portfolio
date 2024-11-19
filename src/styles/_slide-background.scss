@@ -2,9 +2,9 @@
 @use './variables' as *;
 
 .background {
-    $left-color: $mint;
+    $left-color: #DAFFDE;
     $background: $floral;
-    $right-color: $lavender;
+    $right-color: $orchid;
 
     transition: background-position 0.75s;
     background-size: 400% 100%;

@@ -1,13 +1,13 @@
 @use '../../../styles/variables' as *;
 .dev-contact {
-    padding: 3% 25%;
+    padding: 3% 27%;
     position: relative;
     min-height: 75vh;
     text-align: center;
     background-image: url("../../../assets/background-images/planes.png");
     background-repeat: no-repeat;
-    background-position: 94% 24%;
-    background-size: 40%;
+    background-position: 90% 30%;
+    background-size: 30%;
 
     &__link {
         position: relative;
@@ -21,21 +21,22 @@
         min-width: 300px;
         text-align: right;
         background: rgba(255, 255, 255, 0.9);
+        font-size: 1.3em;
 
         &--email {
-            background-color: $lavender;
+            background-color: $lavender-o;
         }
 
         &--phone {
-            background-color: $cantaloupe;
+            background-color: $cantaloupe-o;
         }
 
         &--linkedin {
-            background-color: $honeydew;   
+            background-color: $honeydew-o;   
         }
 
         &--github {
-            background-color: $peach;
+            background-color: $peach-o;
         }
     }
 }

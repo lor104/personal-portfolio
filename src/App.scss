@@ -2,16 +2,14 @@
 @use './styles/typography' as *;
 @use './styles/mixins' as *;
 
-// .dev {
-//   background: red;
-// }
-
-// .art {
-//   background: green;
-// }
+.art {
+  font-family: 'LexendDeca';
+  font-weight: 300
+}
 
 body, html {
   margin: 0;
+  text-align: center;
 }
 
 html {

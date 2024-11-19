@@ -4,8 +4,6 @@ import './App.scss'
 import Nav from './components/nav/Nav';
 import ArtAbout from './pages/art/artAbout/ArtAbout';
 
-// import Skills from './pages/dev/skills/Skills'
-// import ToggleSwitch from './components/toggleSwitch/ToggleSwitch';
 import Landing from './pages/landing/Landing';
 import Error from './components/error/Error';
 import {
@@ -19,6 +17,8 @@ import DevEducation from './pages/dev/devEducation/DevEducation';
 import DevExperience from './pages/dev/devExperience/DevExperience';
 import DevSkills from './pages/dev/devSkills/DevSkills';
 import DevContact from './pages/dev/devContact/DevContact';
+import ArtGallery from './pages/art/artGallery/ArtGallery';
+import ArtContact from './pages/art/artContact/ArtContact';
 
 const AppLayout = () => {
   const location = useLocation();
@@ -77,6 +77,18 @@ const router = createBrowserRouter([
         path: "art/about",
         element: (
           <ArtAbout />
+        ),
+      },
+      {
+        path: "art/gallery",
+        element: (
+          <ArtGallery />
+        ),
+      },
+      {
+        path: "art/contact",
+        element: (
+          <ArtContact />
         ),
       }
     ],

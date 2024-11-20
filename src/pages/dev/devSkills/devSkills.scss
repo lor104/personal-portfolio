@@ -1,4 +1,5 @@
 @use '../../../styles/typography' as *;
+@use '../../../styles/mixins' as *;
 
 @keyframes show {
     0% {
@@ -24,6 +25,19 @@
     min-height: 75vh;
     text-align: center;
 
+    @include mobile {
+        padding: 3% 11%;
+    }
+
+    @include tablet-large {
+        padding: 3% 5%;
+    }
+
+    @include desktop {
+        padding: 3% 7%;
+    }
+
+
     &__description {
         font-family: Inconsolata;
         font-weight: normal;
@@ -31,7 +45,7 @@
         text-align: center;
         line-height: 2;
         width: 80%;
-        margin: 0 auto;
+        margin: 0 auto 50px;
     }
 
     &__link {
@@ -61,6 +75,7 @@
         line-height: 1.6em;;
     }
 
+    
     &.hide {
         opacity: 0;
         display: none;
@@ -69,8 +84,22 @@
     
     &.show {
         opacity: 1;
-        display: static;
+        display: block;
         animation: show 1s;
+    }
+    
+    @include mobile {
+        &.hide, &.show {
+            opacity: 1;
+            display: block;
+            animation: show 1ms;
+        }
+    }
+
+    .dev-skills__link {
+        @include mobile {
+            display: none;
+        }
     }
 }
 
@@ -83,7 +112,14 @@
     
     &.show {
         opacity: 1;
-        display: static;
+        display: block;
         animation: show 1s;
     } 
+
+    @include mobile {
+        &.hide, &.show {
+            opacity: 0;
+            display: none;
+        }
+    }
 }

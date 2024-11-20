@@ -9,7 +9,6 @@ function toggleTheme() {
   const navigate = useNavigate();
 
   const changeTheme = () => {
-    console.log(theme)
     theme === "dev" ?
       navigate("/art/about")
       :

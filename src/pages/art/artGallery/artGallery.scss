@@ -1,5 +1,11 @@
+@use '../../../styles/mixins' as *;
+
 .art-gallery {
     padding: 3% 15%;
+
+    @include mobile {
+        padding: 3% 5%;
+    }
 
     &__content {
         padding-top: 10%;

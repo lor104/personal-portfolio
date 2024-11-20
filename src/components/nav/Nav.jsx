@@ -7,7 +7,6 @@ import './nav.scss';
 
 function Nav() {
   const {theme} = useContext(ThemeContext);
-  console.log(theme)
 
   return (
     <div className={`nav ${theme === "dev" ? "dev" : "art"}`}>

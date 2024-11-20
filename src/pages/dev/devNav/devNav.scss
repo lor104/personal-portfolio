@@ -1,5 +1,6 @@
 @use '../../../styles/typography' as *;
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .dev.header {
     background-color: $foreground;
@@ -8,6 +9,10 @@
     &__title {
         @include titles {
             text-align: center;
+
+            @include mobile {
+                font-size: 1.5em;
+            }
         }
     }
 }
@@ -18,12 +23,16 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
+
+    @include mobile {
+        flex-direction: column
+    }
     
     &__link {
         @include links;
         font-family: Inconsolata;
         letter-spacing: 1px;
-        font-size: 20px;
+        font-size: 1.2em;
         text-decoration: none;
         padding: 3px 10px;
         margin: 3px;
@@ -32,6 +41,11 @@
         width: fit-content;
         margin: auto;
         position: relative;
+
+        @include mobile {
+            font-size: 1em;
+        }
+
         &::before {
             content: "■";
             position: absolute;

@@ -1,8 +1,18 @@
+@use '../../../styles/mixins' as *;
+
 .dev-exp {
     padding: 3% 15%;
     position: relative;
     min-height: 75vh;
     text-align: center;
+
+    @include mobile {
+        padding: 3% 5%;
+    }
+
+    @include tablet-small {
+        padding: 3% 5%;
+    }
     
     &__text-container {
         display: flex;
@@ -19,19 +29,27 @@
     &__dates {
         font-family: Inconsolata;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1em;
         text-align: center;
         line-height: 1.8;
         margin-top: 0.5em;
+
+        @include mobile {
+            font-size: 0.9em;;
+        }
     }
     
     &__position, &__title {
         font-family: Inconsolata;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1em;
         text-align: center;
         line-height: 1.8;
         margin-bottom: 0;
+
+        @include mobile {
+            font-size: 0.9em;;
+        }
     }
 
     &__title {
@@ -41,18 +59,30 @@
     &__description {
         font-family: Inconsolata;
         font-weight: normal;
-        font-size: 20px;
+        font-size: 1.2em;
         text-align: center;
         line-height: 2;
         width: 80%;
         margin: 0 auto;
+
+        @include mobile {
+            font-size: 1em;;
+        }
     }
 
     &__projects {
         margin: 50px;
+
+        @include mobile {
+            margin: 20px;
+        }
     }
 
     &__project {
         margin: 50px 0;
+
+        // @include mobile {
+        //     margin: 20px 0;
+        // }
     }
 }

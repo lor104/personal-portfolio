@@ -1,7 +1,14 @@
+@use '../../styles/mixins' as *;
+
 .match-game {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+
+    @include tablet-large {
+        max-width: 768px;
+        margin: auto;
+    }
 }

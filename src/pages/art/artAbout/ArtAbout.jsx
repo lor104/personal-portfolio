@@ -9,7 +9,7 @@ function ArtAbout() {
     <>
       <div className='art-about'>
         <BorderedHeading title="About" hLevel={2}/>
-        <div class="art-about__container">
+        <div className="art-about__container">
           <p className='art-about__text'>
             Lauren Rosentzveig is a visual artist from Toronto, ON, Canada. She holds a Bachelor of Fine Arts from Queen's University, specializing in Printmedia. 
           </p>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './artAbout.scss';
+import portrait from '../../../assets/background-images/portrait-flip.png'
 
 import BorderedHeading from '../../../components/borderedHeading/BorderedHeading';
 
@@ -19,6 +20,7 @@ function ArtAbout() {
           <p className='art-about__text'>
             After graduating Queen's University, Lauren set up a small studio practice in her hometown of Toronto where she continues to print when time permits, between her full time job as a software developer and home life with her husband, 3 kids and dog. 
           </p>
+          <img className='art-about__portrait' src={portrait} alt="Single line drawing, self portrait" />
         </div>
 
 

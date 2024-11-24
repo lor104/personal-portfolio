@@ -8,12 +8,12 @@
     position: relative;
     overflow: hidden;
 
-    @include mobile {
-        padding: 3% 5%;
-    }
-
     @include tablet-large {
         padding: 3% 15%;
+    }
+    
+    @include mobile {
+        padding: 3% 5%;
     }
 
     &__link {

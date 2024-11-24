@@ -1,5 +1,6 @@
 @use '../../styles/typography' as *;
 @use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
 @use '../../styles/slide-background' as *;
 
 .landing {
@@ -11,6 +12,10 @@
 
     &__title {
         @include titles;
+        
+        @include mobile {
+            font-size: 1em;
+        }
     }
 
     &__tagline {
@@ -32,6 +37,10 @@
     }
 
     .bordered-heading__text {
-        font-size: 60px;
+        font-size: 3.75em;
+
+        @include mobile {
+            font-size: 2em;
+        }
     }
 }

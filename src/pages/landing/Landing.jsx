@@ -22,7 +22,7 @@ function Landing() {
 
     return (
         <div  className={`landing background ${backgroundClass}`}>
-            <BorderedHeading title="Lauren Rosentzveig"/>
+            <BorderedHeading title="Lauren Rosentzveig" hLevel={1}/>
             <Link onClick={() => setTheme("dev")} 
                 onMouseEnter={() => slideBackground("dev")}
                 onMouseLeave={() => setBackgroundClass("")}

@@ -54,6 +54,10 @@
             top: -6px;
             line-height: 1em;
             color: $orchid;
+
+            @include mobile {
+                font-size: 1em;
+            }
         }
 
         &::after {
@@ -64,6 +68,10 @@
             top: -6px;
             line-height: 1em;
             color: $orchid;
+
+            @include mobile {
+                font-size: 1em;
+            }
         }
 
         &--active {

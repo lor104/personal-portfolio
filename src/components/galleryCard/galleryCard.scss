@@ -1,104 +1,142 @@
-.gallery {
-    overflow: hidden;
-    // width: 1200px;
-    margin: 0 auto;
+@use '../../styles/mixins' as *;
+
+.gallery__card {
+  background-color: lightblue;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  
+  width: 100%;
+  flex: 1 1 48%;
+  margin: 1%;
+
+  @include mobile {
+    flex: 1 1 98%;
+  }
+
+  @include tablet-small {
+    flex: 1 1 98%;
+  }
+
+  @include tablet-large {
+    flex: 1 1 98%;
+  }
+
+  &.mouseenter.top .gallery__card-overlay {
+    animation-name: animation--enter-top;
+  }
+  &.mouseenter.right .gallery__card-overlay {
+    animation-name: animation--enter-right;
+  }
+  &.mouseenter.bottom .gallery__card-overlay {
+    animation-name: animation--enter-bottom;
+  }
+  &.mouseenter.left .gallery__card-overlay {
+    animation-name: animation--enter-left;
+  }
+
+  &.mouseleave.top .gallery__card-overlay {
+    animation-name: animation--leave-top;
+  }
+  &.mouseleave.right .gallery__card-overlay {
+    animation-name: animation--leave-right;
+  }
+  &.mouseleave.bottom .gallery__card-overlay {
+    animation-name: animation--leave-bottom;
+  }
+  &.mouseleave.left .gallery__card-overlay {
+    animation-name: animation--leave-left;
+  }
+
+  &-main {
+    flex: 1;
+    text-align: center;
+  }
+
+  &-overlay {
+    transform: translate3d(-100%, 0, 0);
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    &__card {
-        background-color: lightblue;
-        position: relative;
-        display: flex;
-        flex: 1 1 30%;
-        // margin: 1%;
-        height: 250px;
-        align-items: center;
-        justify-items: center;
-        // margin: 10px;
-        overflow: hidden;
-
-        &.mouseenter.top .gallery__card-overlay {
-            animation-name: animation--enter-top;
-        }
-        &.mouseenter.right .gallery__card-overlay {
-            animation-name: animation--enter-right;
-        }
-        &.mouseenter.bottom .gallery__card-overlay {
-            animation-name: animation--enter-bottom;
-        }
-        &.mouseenter.left .gallery__card-overlay {
-            animation-name: animation--enter-left;
-        }
-            
-        &.mouseleave.top .gallery__card-overlay {
-            animation-name: animation--leave-top;
-        }
-        &.mouseleave.right .gallery__card-overlay {
-            animation-name: animation--leave-right;
-        }
-        &.mouseleave.bottom .gallery__card-overlay {
-            animation-name: animation--leave-bottom;
-        }
-        &.mouseleave.left .gallery__card-overlay {
-            animation-name: animation--leave-left;
-        }
-    }
-
-    &__card-main {
-        // width: 30%;
-        // min-height: 200px;
-        // background-color: rgba(0,0,0,0.5);
-        flex: 1;
-        text-align: center;
-    }
-
-    &__card-overlay {
-        transform: translate3d(-100%, 0, 0);
-        animation-duration: 0.5s;
-        animation-fill-mode: forwards;
-        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // opacity: 0;
-    }
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
 @keyframes animation--enter-top {
-    0% { transform: translate3d(0, -100%, 0); }
-    100% { transform: none; }
+  0% {
+    transform: translate3d(0, -100%, 0);
   }
-  @keyframes animation--enter-right {
-    0% { transform: translate3d(100%, 0, 0); }
-    100% { transform: none; }
+  100% {
+    transform: none;
   }
-  @keyframes animation--enter-bottom {
-    0% { transform: translate3d(0, 100%, 0); }
-    100% { transform: none; }
+}
+@keyframes animation--enter-right {
+  0% {
+    transform: translate3d(100%, 0, 0);
   }
-  @keyframes animation--enter-left {
-    0% { transform: translate3d(-100%, 0, 0); }
-    100% { transform: none; }
+  100% {
+    transform: none;
   }
-  @keyframes animation--leave-top {
-    0% { transform: none; }
-    100% { transform: translate3d(0, -100%, 0); }
+}
+@keyframes animation--enter-bottom {
+  0% {
+    transform: translate3d(0, 100%, 0);
   }
-  @keyframes animation--leave-right {
-    0% { transform: none; }
-    100% { transform: translate3d(100%, 0, 0); }
+  100% {
+    transform: none;
   }
-  @keyframes animation--leave-bottom {
-    0% { transform: none; }
-    100% { transform: translate3d(0, 100%, 0); }
+}
+@keyframes animation--enter-left {
+  0% {
+    transform: translate3d(-100%, 0, 0);
   }
-  @keyframes animation--leave-left {
-    0% { transform: none; }
-    100% { transform: translate3d(-100%, 0, 0); }
+  100% {
+    transform: none;
   }
+}
+@keyframes animation--leave-top {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes animation--leave-right {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+@keyframes animation--leave-bottom {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes animation--leave-left {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

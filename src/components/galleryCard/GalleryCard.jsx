@@ -35,8 +35,7 @@ function GalleryCard({ item }) {
             onMouseEnter={(e) => showName(e)} 
             onMouseLeave={(e) => hideName(e)}
             className={`gallery__card ${hoverClass}`}>
-                <div className='gallery__card-main'></div>
-                <img className='gallery__card-main' src="" alt="" />
+                <img className='gallery__card-main' src={item.imageSource} alt="" />
                 <div className='gallery__card-overlay'>{item.name}</div>
         </div>
     )

@@ -9,7 +9,7 @@ function ArtGallery() {
     <div className="art-gallery">
       <BorderedHeading title="Gallery" hLevel={2}/>
       <div className='art-gallery__content'>
-        <ColouredHeading title="Coming Soon!" hLevel={3} colour={"peach"}/>
+        {/* <ColouredHeading title="Coming Soon!" hLevel={3} colour={"peach"}/> */}
         <GalleryItems/>
       </div>
     </div>

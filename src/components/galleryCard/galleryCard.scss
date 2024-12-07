@@ -15,6 +15,8 @@
         height: 250px;
         align-items: center;
         justify-items: center;
+        // margin: 10px;
+        overflow: hidden;
 
         &.mouseenter.top .gallery__card-overlay {
             animation-name: animation--enter-top;

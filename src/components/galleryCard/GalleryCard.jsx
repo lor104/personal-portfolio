@@ -1,18 +1,9 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react';
 import './galleryCard.scss';
 
-function GalleryCard() {
-    const [hoverClass, setHoverClass] = useState('')
-    const galleryItems = [
-        {
-            id: 1,
-            name: "Home"
-        },
-        {
-            id: 2,
-            name: "Family"
-        }
-    ]
+function GalleryCard({ item }) {
+    const [hoverClass, setHoverClass] = useState('');
+
 
     const getHoverDirection = (e) => {
         var directions = ['top', 'right', 'bottom', 'left'];
@@ -30,31 +21,23 @@ function GalleryCard() {
     }
 
     const showName = (e) => {
-        console.log(e)
         let direction = getHoverDirection(e)
         setHoverClass(`mouseenter ${direction}`)
     }
 
     const hideName = (e) => {
-        console.log(e)
         let direction = getHoverDirection(e)
         setHoverClass(`mouseleave ${direction}`)
     }
 
     return (
-        <div className='gallery'>
-            {galleryItems.map(item => {
-                return (<div 
-                    key={item.id}
-                    onMouseEnter={(e) => showName(e)} 
-                    onMouseLeave={(e) => hideName(e)}
-                    className={`gallery__card ${hoverClass}`}>
-                        <div className='gallery__card-main'></div>
-                        <img className='gallery__card-main' src="" alt="" />
-                        <div className='gallery__card-overlay'>{item.name}</div>
-                </div>)
-            })}
-            
+        <div 
+            onMouseEnter={(e) => showName(e)} 
+            onMouseLeave={(e) => hideName(e)}
+            className={`gallery__card ${hoverClass}`}>
+                <div className='gallery__card-main'></div>
+                <img className='gallery__card-main' src="" alt="" />
+                <div className='gallery__card-overlay'>{item.name}</div>
         </div>
     )
 }
